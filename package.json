@@ -1,7 +1,7 @@
 {
-  "name": "explore-pnp",
+  "name": "express-prisma-playground",
   "version": "1.0.0",
-  "description": "",
+  "description": "Express server with Prisma and Typescript",
   "main": "index.js",
   "scripts": {
     "dev": "tsx watch src/index.ts",
@@ -9,7 +9,7 @@
     "build": "tsc"
   },
   "keywords": [],
-  "author": "",
+  "author": "Maruf Billah",
   "license": "ISC",
   "type": "module",
   "devDependencies": {
