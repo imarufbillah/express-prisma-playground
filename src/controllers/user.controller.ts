@@ -39,3 +39,26 @@ export const createUser = async (
     });
   }
 };
+
+export const updateUser = async (
+  req: Request<{ id: string }>,
+  res: Response,
+): Promise<void> => {
+  try {
+    const { id } = req.params;
+    const { name, email } = req.body;
+
+    await userService.updateUser(id, name, email);
+
+    res.status(200).json({
+      success: true,
+      message: "User updated successfully",
+    });
+  } catch (error) {
+    console.error("Failed to update user:", error);
+    res.status(500).json({
+      success: false,
+      message: "Failed to update user",
+    });
+  }
+};
