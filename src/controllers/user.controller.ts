@@ -19,7 +19,7 @@ export const getUsers = async (_req: Request, res: Response): Promise<void> => {
 };
 
 export const createUser = async (
-  req: Request,
+  req: Request<{ name: string; email: string }>,
   res: Response,
 ): Promise<void> => {
   try {
